@@ -114,7 +114,7 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
               isItem
             />
           ) : (
-            <div className="flex items-center justify-end space-x-1">
+            <div className="flex items-center justify-end space-x-2 text-lg">
               <button className="cursor-pointer" onClick={() => setIsAdding(true)}>
                 <FiPlus />
               </button>

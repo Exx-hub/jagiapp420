@@ -28,10 +28,10 @@ function AddForm({ handleAdd, input, setInput, setIsAdding, isItem }: AddFormPro
         }`}
       />
 
-      <button type="submit">
+      <button type="submit" className="text-2xl mr-1">
         <HiCheckCircle />
       </button>
-      <button type="button" onClick={handleCancel}>
+      <button type="button" className="text-2xl" onClick={handleCancel}>
         <HiXCircle />
       </button>
     </form>

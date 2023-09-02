@@ -30,7 +30,7 @@ function CreateLocation() {
   };
 
   return (
-    <div className="bg-transparent border border-gray-300 p-2 rounded-lg w-[90%] mx-auto min-w-[337px] relative flex">
+    <div className="bg-transparent border border-gray-300 p-2 rounded-lg w-[90%] mx-auto min-w-[337px] relative flex mt-5">
       <div className="absolute inset-0 bg-black opacity-40 z-0 rounded-lg"></div>
       {isAdding ? (
         <AddForm

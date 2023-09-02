@@ -84,7 +84,7 @@ function TravelPage() {
             <button
               className={`tab  ${
                 currentTab === "international"
-                  ? "bg-gray-100 border-t-[4px] border-[#333]"
+                  ? "bg-gray-100 border-t-[4px] border-[#333] text-black"
                   : "bg-[#333] text-white"
               }`}
               onClick={() => {

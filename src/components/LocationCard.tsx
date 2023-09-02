@@ -74,7 +74,7 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
 
   return (
     <div className="bg-white text-[#333] border border-gray-300 p-2 rounded-lg flex flex-col w-[90%] mx-auto min-w-[337px] mb-1">
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <div className="font-bold uppercase hover:text-slate-600 px-2 text-xl">{title}</div>
 
         <div className="cursor-pointer" onClick={() => setOpen((prev) => !prev)}>
@@ -83,7 +83,7 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
       </div>
 
       {open && (
-        <div className="animate-fade-in">
+        <div>
           {items?.length > 0 ? (
             <ul className="mb-3 ml-1 text-lg">
               {items.map((item, index) => (

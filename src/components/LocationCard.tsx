@@ -73,7 +73,7 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
   };
 
   return (
-    <div className="bg-white text-black border border-gray-300 p-2 rounded-lg flex flex-col w-[90%] mx-auto min-w-[337px] mb-1">
+    <div className="bg-white text-[#333] border border-gray-300 p-2 rounded-lg flex flex-col w-[90%] mx-auto min-w-[337px] mb-1">
       <div className="flex justify-between">
         <div className="font-bold uppercase hover:text-slate-600 px-2 text-xl">{title}</div>
 
@@ -87,7 +87,7 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
           {items?.length > 0 ? (
             <ul className="mb-3 ml-1 text-lg">
               {items.map((item, index) => (
-                <div key={item.name} className="flex items-center text-sm p-1">
+                <div key={item.name} className="flex items-center text-base p-1">
                   <h2
                     onClick={() => handleToggle(index)}
                     className={item.completed ? "line-through" : ""}

@@ -17,14 +17,14 @@ function AddForm({ handleAdd, input, setInput, setIsAdding, isItem }: AddFormPro
   return (
     <form
       onSubmit={handleAdd}
-      className={`flex items-center text-xl z-10 px-1 ${isItem ? "text-black" : "text-white"}`}
+      className={`flex items-center text-xl z-10 px-1 ${isItem ? "text-[#333]" : "text-white"}`}
     >
       <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder={isItem ? "Add New Item" : "Add New Location"}
         className={`px-2 py-1 rounded-md mr-1  outline-none text-gray-500 bg-white ${
-          isItem ? "border border-gray-300 text-xs py-1" : "text-base"
+          isItem ? "border border-gray-300 text-sm py-1" : "text-base"
         }`}
       />
 

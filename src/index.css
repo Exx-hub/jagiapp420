@@ -17,3 +17,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.tab {
+  @apply p-2 rounded-t-[3px] shadow-[6px_0_4px_-4px_#999,-2px_0_4px_-4px_#999] text-sm;
+}

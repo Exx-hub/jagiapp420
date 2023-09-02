@@ -84,7 +84,7 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
 
       {open && (
         <div className="animate-fade-in">
-          {items?.length && (
+          {items?.length > 0 ? (
             <ul className="mb-3 ml-1 text-lg">
               {items.map((item, index) => (
                 <div key={item.name} className="flex items-center text-sm p-1">
@@ -103,7 +103,7 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
                 </div>
               ))}
             </ul>
-          )}
+          ) : null}
 
           {isAdding ? (
             <AddForm

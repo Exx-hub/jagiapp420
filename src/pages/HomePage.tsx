@@ -19,8 +19,6 @@ interface Location {
 function HomePage() {
   const [locations, setLocations] = useState<Location[] | null>([]);
 
-  console.log(locations);
-
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, "locations"), (snapshot) => {
       const parsedData = snapshot.docs.map((doc) => {

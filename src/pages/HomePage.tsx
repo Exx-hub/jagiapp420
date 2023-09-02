@@ -34,7 +34,7 @@ function HomePage() {
   const { showContent } = useContext(Context);
 
   return (
-    <div className={`mx-auto w-full max-w-lg  h-full`}>
+    <div className="mx-auto w-full max-w-lg">
       {showContent ? (
         <div className="h-full">
           {/* <h2>of Food and Places</h2> */}

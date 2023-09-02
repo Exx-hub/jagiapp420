@@ -73,7 +73,7 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
   };
 
   return (
-    <div className="bg-white border border-gray-300 p-2 rounded-lg flex flex-col w-[90%] mx-auto min-w-[337px] mb-1">
+    <div className="bg-white text-black border border-gray-300 p-2 rounded-lg flex flex-col w-[90%] mx-auto min-w-[337px] mb-1">
       <div className="flex justify-between">
         <div className="font-bold uppercase hover:text-slate-600 px-2 text-xl">{title}</div>
 

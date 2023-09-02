@@ -2,7 +2,7 @@ import { FiChevronDown, FiChevronUp, FiPlus, FiTrash, FiTrash2 } from "react-ico
 
 import { useState } from "react";
 import AddForm from "./AddForm";
-import { doc, updateDoc } from "firebase/firestore";
+import { deleteDoc, doc, updateDoc } from "firebase/firestore";
 import { db } from "../config/firebase-config";
 import { Item } from "../pages/HomePage";
 
@@ -52,6 +52,26 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
     }
   };
 
+  const handleDeleteItem = async (index: number) => {
+    const filteredItems = items.filter((_, i) => index !== i);
+
+    try {
+      await updateDoc(doc(db, "locations", id), { items: filteredItems });
+      console.log("item deleted");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleDeleteLocation = async () => {
+    try {
+      await deleteDoc(doc(db, "locations", id));
+      console.log("location deleted");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="bg-white border border-gray-300 p-2 rounded-lg flex flex-col w-[90%] mx-auto min-w-[337px] mb-1">
       <div className="flex justify-between">
@@ -74,7 +94,10 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
                   >
                     {item.name}
                   </h2>
-                  <span className="ml-1 text-[14px] text-gray-500">
+                  <span
+                    className="ml-1 text-[14px] text-gray-500"
+                    onClick={() => handleDeleteItem(index)}
+                  >
                     <FiTrash2 />
                   </span>
                 </div>
@@ -96,7 +119,7 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
                 <FiPlus />
               </button>
 
-              <button className="cursor-pointer">
+              <button className="cursor-pointer" onClick={handleDeleteLocation}>
                 <FiTrash />
               </button>
             </div>

@@ -14,7 +14,7 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
   const handleAdd = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!isAdding || !location) {
+    if (!isAdding || !input) {
       alert("please enter an input");
       return;
     }

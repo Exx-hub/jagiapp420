@@ -63,7 +63,7 @@ function TravelPage() {
   const { showContent } = useContext(Context);
 
   return (
-    <div className="w-[90%] mx-auto h-[calc(100vh-58px)] pt-20">
+    <div className="w-[90%] mx-auto h-[calc(100vh-58px)] pt-20 animate-fadeIn">
       {showContent ? (
         <div className="w-full mx-auto">
           <div className="flex space-x-4 translate-x-5 text-sm">
@@ -99,7 +99,7 @@ function TravelPage() {
 
           <div className="p-4 bg-gray-100 shadow-lg rounded">
             {currentTab === "domestic" ? (
-              <div className="flex flex-col">
+              <div className="flex flex-col animate-fadeIn">
                 <h2 className="text-2xl mb-2 pl-1">🚙🚙🚙</h2>
                 <ul className="px-1 mb-2">
                   {destinations?.map((dest) => (
@@ -135,7 +135,7 @@ function TravelPage() {
                 )}
               </div>
             ) : (
-              <div className="flex flex-col">
+              <div className="flex flex-col animate-slide-from-top">
                 <h2 className="text-2xl mb-2 pl-1">🛩️🛩️🛩️</h2>
                 <ul className="px-1 mb-2">
                   {destinations?.map((dest) => (

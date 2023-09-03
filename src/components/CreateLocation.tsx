@@ -12,8 +12,6 @@ function CreateLocation() {
   const handleAdd = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // console.log(location);
-
     if (!isAdding || !input) {
       alert("please enter an input");
       return;

@@ -17,7 +17,9 @@ function AddForm({ handleAdd, input, setInput, setIsAdding, isItem }: AddFormPro
   return (
     <form
       onSubmit={handleAdd}
-      className={`flex items-center text-xl z-10 px-1 ${isItem ? "text-[#333]" : "text-white"}`}
+      className={`flex items-center text-xl z-10 px-1 animate-fadeIn ${
+        isItem ? "text-[#333]" : "text-white"
+      }`}
     >
       <input
         value={input}
@@ -28,11 +30,11 @@ function AddForm({ handleAdd, input, setInput, setIsAdding, isItem }: AddFormPro
         }`}
       />
 
-      <button type="submit" className="text-2xl mr-1">
-        <HiCheckCircle />
-      </button>
-      <button type="button" className="text-2xl" onClick={handleCancel}>
+      <button type="button" className="text-2xl mr-1" onClick={handleCancel}>
         <HiXCircle />
+      </button>
+      <button type="submit" className="text-2xl ">
+        <HiCheckCircle />
       </button>
     </form>
   );

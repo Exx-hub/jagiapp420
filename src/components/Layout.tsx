@@ -3,10 +3,10 @@ import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
 
 function Layout() {
-  const [bg, setBg] = useState("bg-siargao2");
+  const [bg, setBg] = useState("");
 
   useEffect(() => {
-    const randomNumber = Math.floor(Math.random() * 17);
+    const randomNumber = Math.floor(Math.random() * 16);
 
     const bgs = [
       "bg-couple",
@@ -30,7 +30,7 @@ function Layout() {
     setBg(bgs[randomNumber]);
   }, []);
   return (
-    <main className={`h-screen mx-auto relative bg-siargao bg-cover bg-center bg-no-repeat ${bg}`}>
+    <main className={`h-screen mx-auto relative bg-cover bg-center bg-no-repeat ${bg}`}>
       <Navbar />
       <Outlet />
     </main>

@@ -19,7 +19,7 @@ function Navbar() {
             <Link to="/travel">🧭</Link>
           </li>
           <li>
-            <Link to="/requests">👨🏼‍🍳</Link>
+            <Link to="/requests">🍽️</Link>
           </li>
           <li onClick={() => setShowContent((prev) => !prev)}>🫣</li>
         </ul>

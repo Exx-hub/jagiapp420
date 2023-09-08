@@ -63,7 +63,7 @@ function TravelPage() {
   const { showContent } = useContext(Context);
 
   return (
-    <div className="w-[90%] mx-auto h-[calc(100vh-58px)] pt-20 animate-fadeIn">
+    <div className="w-[90%] mx-auto h-[calc(100vh-58px)] max-w-lg pt-20 animate-fadeIn">
       {showContent ? (
         <div className="w-full mx-auto">
           <div className="flex space-x-4 translate-x-5 text-sm">

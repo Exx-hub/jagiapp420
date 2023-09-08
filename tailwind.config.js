@@ -20,6 +20,7 @@ export default {
         korea1: "url('./assets/bgs/korea1.jpg')",
         korea2: "url('./assets/bgs/korea2.jpg')",
         travel: "url('./assets/bgs/travel.jpg')",
+        menu: "url('./assets/menu.jpg')",
       },
       animation: {
         "slide-from-top": "slide-down 300ms both",
@@ -35,6 +36,9 @@ export default {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
+      },
+      fontFamily: {
+        chalk: ["Fredericka the Great", "cursive"],
       },
     },
   },

@@ -1,10 +1,9 @@
-import { FiChevronDown, FiChevronUp, FiPlus, FiTrash, FiTrash2 } from "react-icons/fi";
-
 import { useState } from "react";
-import AddForm from "./AddForm";
+import { FiChevronDown, FiChevronUp, FiPlus, FiTrash, FiTrash2 } from "react-icons/fi";
 import { deleteDoc, doc, updateDoc } from "firebase/firestore";
 import { db } from "../config/firebase-config";
 import { Item } from "../pages/HomePage";
+import AddForm from "./AddForm";
 
 function LocationCard({ title, items, id }: { title: string; items: Item[]; id: string }) {
   const [open, setOpen] = useState(false);

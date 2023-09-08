@@ -128,7 +128,7 @@ function TravelPage() {
                 ) : (
                   <button
                     onClick={() => setIsAdding(true)}
-                    className="self-end text-2xl text-[#8d839c] hover:scale-[1.15] transition-all duration-300"
+                    className="self-end text-2xl text-[#8d839c]"
                   >
                     <HiOutlinePlusCircle />
                   </button>

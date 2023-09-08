@@ -6,14 +6,11 @@ function Layout() {
   const [bg, setBg] = useState("");
 
   useEffect(() => {
-    const randomNumber = Math.floor(Math.random() * 16);
-
     const bgs = [
       "bg-couple",
       "bg-siargao",
       "bg-siargao2",
       "bg-bucketlist",
-      "bg-bucket2",
       "bg-vatican",
       "bg-vatican1",
       "bg-turkey",
@@ -25,7 +22,17 @@ function Layout() {
       "bg-korea1",
       "bg-korea2",
       "bg-travel",
+      "bg-brazil",
+      "bg-hanoi",
+      "bg-hawaii",
+      "bg-hk",
+      "bg-santorini",
+      "bg-taipei",
+      "bg-train",
+      "bg-vietnam",
     ];
+
+    const randomNumber = Math.floor(Math.random() * bgs.length);
 
     setBg(bgs[randomNumber]);
   }, []);

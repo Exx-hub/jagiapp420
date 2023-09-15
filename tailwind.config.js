@@ -33,6 +33,7 @@ export default {
         "slide-from-top": "slide-down 300ms both",
         wiggle: "wiggle 2s linear infinite",
         fadeIn: "fadeIn 800ms",
+        spinnah: "spinspin 300ms",
       },
       keyframes: {
         "slide-down": {
@@ -42,6 +43,11 @@ export default {
         fadeIn: {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
+        },
+        spinspin: {
+          "0%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(180deg)" },
+          "100%": { transform: "rotate(180deg)" },
         },
       },
       fontFamily: {

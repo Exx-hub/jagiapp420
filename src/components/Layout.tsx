@@ -37,7 +37,7 @@ function Layout() {
     setBg(bgs[randomNumber]);
   }, []);
   return (
-    <main className={`h-screen mx-auto relative bg-cover bg-center bg-no-repeat ${bg}`}>
+    <main className={`max-w-md h-screen mx-auto relative bg-cover bg-center bg-no-repeat ${bg}`}>
       <Navbar />
       <Outlet />
     </main>

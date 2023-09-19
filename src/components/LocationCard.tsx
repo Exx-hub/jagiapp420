@@ -81,13 +81,13 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
 
   return (
     <div className="bg-white text-[#333] border border-gray-300 p-2 rounded-lg flex flex-col w-[90%] mx-auto min-w-[337px] mb-1">
-      <div className="flex justify-between items-center">
+      <div
+        className="flex justify-between items-center cursor-pointer"
+        onClick={() => setOpen((prev) => !prev)}
+      >
         <div className="font-bold uppercase hover:text-slate-600 px-2 text-xl">{title}</div>
 
-        <div
-          className={`cursor-pointer ${open ? "rotate-180" : "rotate-0"}`}
-          onClick={() => setOpen((prev) => !prev)}
-        >
+        <div className={`${open ? "rotate-180" : "rotate-0"}`}>
           <FiChevronDown />
         </div>
       </div>

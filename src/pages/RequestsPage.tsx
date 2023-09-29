@@ -5,6 +5,7 @@ import { HiOutlinePlusCircle } from "react-icons/hi";
 import RequestItem from "../components/RequestItem";
 import AddForm from "../components/AddForm";
 import { Context } from "../context/context";
+import Modal from "../components/Modal";
 
 export interface IRequest {
   title: string;
@@ -111,28 +112,36 @@ function RequestsPage() {
             </div>
           </div>
 
-          {requests && requests?.length < 5 && (
-            <>
-              {isAdding ? (
-                <div className="text-xl text-white bg-black/50 w-max ml-3 mt-2 p-1 rounded-lg">
-                  <AddForm
-                    input={input}
-                    setInput={setInput}
-                    setIsAdding={setIsAdding}
-                    handleAdd={handleAdd}
-                    isRequest
-                  />
-                </div>
-              ) : (
-                <button
-                  onClick={() => setIsAdding(true)}
-                  className="bg-black/50 ml-3 mt-2 p-1 rounded-lg text-2xl text-white"
-                >
-                  <HiOutlinePlusCircle />
-                </button>
-              )}
-            </>
-          )}
+          <div className="flex items-center">
+            {requests && requests?.length < 5 && (
+              <>
+                {isAdding ? (
+                  <div className="text-xl text-white bg-black/50 w-max ml-3 mt-2 p-1 rounded-lg">
+                    <AddForm
+                      input={input}
+                      setInput={setInput}
+                      setIsAdding={setIsAdding}
+                      handleAdd={handleAdd}
+                      isRequest
+                    />
+                  </div>
+                ) : (
+                  <>
+                    <button
+                      onClick={() => setIsAdding(true)}
+                      className="bg-black/50 ml-3 p-2 rounded-lg text-2xl text-white"
+                    >
+                      <HiOutlinePlusCircle />
+                    </button>
+
+                    <div className="ml-auto mr-3">
+                      <Modal />
+                    </div>
+                  </>
+                )}
+              </>
+            )}
+          </div>
         </>
       ) : null}
     </section>

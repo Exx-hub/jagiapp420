@@ -11,13 +11,13 @@ function RequestItem({ request, handleToggle, handleDeleteRequest }: RequestItem
   return (
     <li className="flex items-center justify-between">
       <p
-        className={request.completed ? "line-through" : ""}
+        className={`cursor-pointer ${request.completed ? "line-through" : ""}`}
         onClick={() => handleToggle(request.id, request.completed)}
       >
         {request.title}
       </p>
 
-      <span className="text-base" onClick={() => handleDeleteRequest(request.id)}>
+      <span className="text-base cursor-pointer" onClick={() => handleDeleteRequest(request.id)}>
         <FiTrash />
       </span>
     </li>

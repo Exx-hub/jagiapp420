@@ -101,7 +101,7 @@ function LocationCard({ title, items, id }: { title: string; items: Item[]; id: 
             {items?.length > 0 ? (
               <ul className="mb-3 ml-1 text-lg">
                 {items.map((item, index) => (
-                  <div key={item.name} className="flex items-center text-base p-1">
+                  <div key={item.name} className="flex items-center text-base p-1 cursor-pointer">
                     <h2
                       onClick={() => handleToggle(index)}
                       className={item.completed ? "line-through" : ""}

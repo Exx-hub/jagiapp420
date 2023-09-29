@@ -21,7 +21,9 @@ function Navbar() {
           <li>
             <Link to="/requests">🍽️</Link>
           </li>
-          <li onClick={() => setShowContent((prev) => !prev)}>🫣</li>
+          <li onClick={() => setShowContent((prev) => !prev)} className="cursor-pointer">
+            🫣
+          </li>
         </ul>
       </nav>
     </header>

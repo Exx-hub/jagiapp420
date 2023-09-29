@@ -112,11 +112,11 @@ function RequestsPage() {
             </div>
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center pt-2">
             {requests && requests?.length < 5 && (
               <>
                 {isAdding ? (
-                  <div className="text-xl text-white bg-black/50 w-max ml-3 mt-2 p-1 rounded-lg">
+                  <div className="text-xl text-white bg-black/50 w-max ml-4 mt-2 p-1 rounded-lg">
                     <AddForm
                       input={input}
                       setInput={setInput}
@@ -129,12 +129,12 @@ function RequestsPage() {
                   <>
                     <button
                       onClick={() => setIsAdding(true)}
-                      className="bg-black/50 ml-3 p-2 rounded-lg text-2xl text-white"
+                      className="bg-black/50 ml-4 p-2 rounded-lg text-2xl text-white"
                     >
                       <HiOutlinePlusCircle />
                     </button>
 
-                    <div className="ml-auto mr-3">
+                    <div className="ml-auto mr-4">
                       <Modal />
                     </div>
                   </>

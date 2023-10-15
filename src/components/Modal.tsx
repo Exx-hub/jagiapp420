@@ -22,12 +22,12 @@ function Modal() {
           </div>
           <h3 className="font-bold text-xl">Paborito Leaderboard 💯</h3>
           <p className="text-lg">🥇 Kare kare</p>
-          <p className="text-lg">🥈 Tinola</p>
-          <p className="text-lg">🥉 Kimchi Jjigae</p>
+          <p className="text-lg">🥈 Kimchijjigang Gang</p>
+          <p className="text-lg">🥉 Tinola</p>
           <br></br>
           <p className="ml-1 font-semibold">Honorable Mentions:</p>
+          <p className="">🎖️ Kimchi Jjigae</p>
           <p className="">🎖️ Pininyahang Manok</p>
-          <p className="">🎖️ Sinigang</p>
 
           <div className="mt-5 text-center">
             <p>(Updated Weekly!)</p>
